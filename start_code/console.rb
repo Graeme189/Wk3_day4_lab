@@ -13,6 +13,14 @@ movie2.save
 movie3 = Movie.new({'title' => 'Indiana Jones', 'genre' => 'action'})
 movie3.save
 
+star1 = Star.new({'first_name' => 'Harrison', 'last_name' => 'Ford'})
+star1.save
+
+star2 = Star.new({'first_name' => 'Mark', 'last_name' => 'Hamill'})
+star2.save
+
+star3 = Star.new({'first_name' => 'Steve', 'last_name' => 'Buscemi'})
+star3.save
 
 binding.pry
 nil
