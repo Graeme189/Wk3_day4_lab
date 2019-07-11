@@ -11,7 +11,7 @@ class Movie
     @genre = options['genre']
   end
 
-  def save
+  def save()
     sql = "INSERT INTO movies (title, genre)
           VALUES ($1, $2)
           RETURNING id;"
@@ -19,5 +19,14 @@ class Movie
    movie = SqlRunner.run(sql, values).first
    @id = movie['id'].to_i
  end
+
+ def update()
+   sql = "UPDATE movies SET title = $1
+         WHERE id = $2;"
+    values = [@title, @id]
+    SqlRunner.run(sql, values)
+ end
+
+
 
 end

@@ -7,11 +7,17 @@ require('pry-byebug')
 movie1 = Movie.new({'title' => 'Star Wars', 'genre' => 'Sci fi'})
 movie1.save
 
+movie1.title = 'Star Wars Episode 4'
+movie1.update()
+
 movie2 = Movie.new({'title' => 'Death of Stalin', 'genre' => 'Comedy'})
-movie2.save
+movie2.save()
 
 movie3 = Movie.new({'title' => 'Indiana Jones', 'genre' => 'action'})
-movie3.save
+movie3.save()
+
+movie3.title = 'Raiders of the Lost Ark'
+movie3.update()
 
 star1 = Star.new({'first_name' => 'Harrison', 'last_name' => 'Ford'})
 star1.save
@@ -21,6 +27,8 @@ star2.save
 
 star3 = Star.new({'first_name' => 'Steve', 'last_name' => 'Buscemi'})
 star3.save
+
+
 
 binding.pry
 nil
