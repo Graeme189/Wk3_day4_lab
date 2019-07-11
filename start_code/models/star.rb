@@ -20,5 +20,19 @@ class Star
     @id = star['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE stars SET first_name = $1
+          WHERE id = $2;"
+     values = [@first_name, @id]
+     SqlRunner.run(sql, values)
+  end
+
+  def update()
+    sql = "UPDATE stars SET last_name = $1
+          WHERE id = $2;"
+     values = [@last_name, @id]
+     SqlRunner.run(sql, values)
+  end
+
 
 end

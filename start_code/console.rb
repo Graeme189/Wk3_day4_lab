@@ -28,6 +28,9 @@ star2.save
 star3 = Star.new({'first_name' => 'Steve', 'last_name' => 'Buscemi'})
 star3.save
 
+star1.first_name = 'George'
+star1.last_name = 'Clooney'
+star1.update()
 
 
 binding.pry
